@@ -43,14 +43,14 @@ func promptPluginReleaseData(pluginRelease *plugin.PluginRelease) {
 	scanner.Scan()
 	pluginRelease.Name = scanner.Text()
 	if pluginRelease.Name == "" {
-		pluginRelease.Name = "Sampe Plugin"
+		pluginRelease.Name = "Sample Plugin"
 	}
 
 	fmt.Print("Package: ")
 	scanner.Scan()
 	pluginRelease.Package = scanner.Text()
 	if pluginRelease.Package == "" {
-		pluginRelease.Package = "com.flare.sample"
+		pluginRelease.Package = "com.sample.plugin"
 	}
 
 	fmt.Print("Description: ")

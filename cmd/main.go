@@ -27,7 +27,7 @@ func main() {
 		return
 	}
 
-	zip.Zip(pluginRelease.Package, fmt.Sprintf("%s.zip", pluginRelease.Package))
+	zip.Zip(pluginRelease.Package, fmt.Sprintf("%s-v%v.%v.%v.zip", pluginRelease.Package, pluginRelease.Version.Major, pluginRelease.Version.Minor, pluginRelease.Version.Patch))
 
 	cleanup(pluginRelease.Package)
 }

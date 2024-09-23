@@ -7,7 +7,7 @@ import (
 
 func Zip(srcDir string, destFile string) error {
 	fmt.Println("Zipping: ", srcDir, " -> ", destFile)
-	cmd := exec.Command("zip", "-r", destFile, ".")
+	cmd := exec.Command("zip", "-r", destFile, srcDir)
 	err := cmd.Run()
 	if err != nil {
 		fmt.Println("Error zipping: ", err)
